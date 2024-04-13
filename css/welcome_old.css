@@ -1,0 +1,110 @@
+#welcome {
+  width: 100%;
+  /* position: relative; */
+  --height: calc(100vh - 3em);
+  min-height: var(--height);
+
+  background-color: #eee;
+  --logoWidth: 40vmin;
+  --logoTop: 40%;
+}
+hr {
+  margin: 0;
+}
+.logo {
+  position: absolute;
+  top: var(--logoTop);
+  right: 8vw;
+  overflow: hidden;
+  width: var(--logoWidth);
+  transform: translate(0%, -50%);
+  animation-fill-mode: backwards;
+}
+/* @keyframes fromLeftInto {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+@keyframes fromTopInto {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+}
+@keyframes opacityAdd {
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes tensile {
+  0% {
+    letter-spacing: 0.3em;
+  }
+} */
+/* #welcome-title {
+  animation: tensile 1s 1.8s;
+} */
+#logo-main,
+.tt {
+  position: absolute;
+  top: var(--logoTop);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* animation: fromLeftInto 2s; */
+}
+#logo-py {
+  animation: fromTopInto 1.5s 1s;
+  opacity: 1;
+  animation-fill-mode: backwards;
+}
+#logo-time {
+  animation: opacityAdd 1s 2.2s;
+  animation-fill-mode: backwards;
+}
+#logo-circle {
+  animation: opacityAdd 1s 2.8s;
+  animation-fill-mode: backwards;
+}
+#welcome .tt {
+  /* position: absolute;
+  top: var(--logoTop);
+  right: 50%;
+  left: 50%;
+  width: max-content;
+  margin: 0;
+  transform: translate(-50%, calc(var(--logoWidth) / 2));
+  animation: opacityAdd 1s 2s;
+  opacity: 1;
+  animation-fill-mode: backwards; */
+  position: absolute;
+  width: max-content;
+  left: 28vw;
+  font-size: max(1.3vw,70%);
+  transform: translate(-50%, calc(-50% - 1vw));
+}
+@media (max-height: 350px) {
+  .imgs {
+    display: none;
+  }
+  #welcome .tt {
+    top: 20%;
+    transform: translate(-50%, 0);
+  }
+}
+@media (max-width: 500px) {
+  .tt div.introduction {
+    flex-direction: column;
+  }
+  .tt div.introduction p {
+    width: 40vw;
+  }
+}
+.introduction {
+  display: flex;
+  flex-direction: row;
+}
+.introduction p {
+  flex: 1;
+  width: 18vw;
+}
