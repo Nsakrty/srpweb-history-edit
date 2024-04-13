@@ -2,6 +2,8 @@ body {
   font-family: sans-serif, arial;
   color: #464849;
   background-color: #ccf;
+  /* background-color: #dcdcf0; */
+  font-weight:300;
 }
 :root {
   scroll-behavior: smooth;
@@ -18,3 +20,4 @@ td {
 table.RL td:last-child {
   font-size: 8px;
 }
+
